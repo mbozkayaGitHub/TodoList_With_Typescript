@@ -7,6 +7,9 @@ interface TodoType {
 
   interface ITodoList {
     todos:TodoType[];
+    toggleTodo:ToggleFn;
   }
 
   type AddFn = (text:string) => void; // işlem yapan bir fonksiyon oldugu için void ekledik
+
+  type ToggleFn =(item:TodoType)=> void;
